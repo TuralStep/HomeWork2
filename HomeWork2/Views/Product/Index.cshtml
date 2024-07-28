@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Product>
+
+
+<section>
+    @*<a asp-controller="Product" asp-action="Add">Add product</a>       Layout hissesine elave etdim sonradan one gore burani bagladim*@
+    @foreach (var item in @Model)
+    {
+        <section>
+            <hr />
+            <h2>Name: @item.Name</h2>
+            <h2>Description: @item.Description</h2>
+            <h2>Price: @item.Price</h2>
+            <h2>Discount: @item.Discount%</h2>
+            <a asp-controller="Product" asp-action="Delete" asp-route-id="@item.Id" style="color:red">Delete</a>
+            <a asp-controller="Product" asp-action="Update" asp-route-id="@item.Id" style="color:orange">Update</a>
+        </section>
+    }
+</section>

@@ -1,0 +1,29 @@
+﻿@model ProductUpdateViewModel
+
+<section>
+    <form asp-controller="Product" asp-action="Update">
+        <section>
+            <label asp-for="praVM.Name"></label>
+            <input asp-for="praVM.Name" />
+            <span style="color:red;" asp-validation-for="praVM.Name"></span>
+        </section>
+        <section>
+            <label asp-for="praVM.Description"></label>
+            <input asp-for="praVM.Description" />
+            <span style="color:red;" asp-validation-for="praVM.Description"></span>
+        </section>
+        <section>
+            <label asp-for="praVM.Price"></label>
+            <input asp-for="praVM.Price" />
+            <span style="color:red;" asp-validation-for="praVM.Price"></span>
+        </section>
+        <section>
+            <label asp-for="praVM.Discount"></label>
+            <input asp-for="praVM.Discount" />
+            <span style="color:red;" asp-validation-for="praVM.Discount"></span>
+        </section>
+        <section>
+            <button type="submit" style="color:green">Submit</button>
+        </section>
+    </form>
+</section>
